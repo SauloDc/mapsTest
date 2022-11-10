@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import MapView from "./MapView";
-import Logo from "./mapPin.svg";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import MapView from "./mapComponent/MapView";
+import MapPin from "./mapComponent/mapPin";
 
 export default function App() {
   const [position, setPosition] = useState(null);
@@ -65,7 +65,7 @@ export default function App() {
           marginTop: -5,
         }}
       ></View>
-      <Logo />
+      {/* <MapPin /> */}
       <View>
         <Text style={styles.txt}>{position}</Text>
         <Text style={[styles.txt, { marginTop: 20 }]}>

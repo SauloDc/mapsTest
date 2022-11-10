@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import WebView from "react-native-webview";
-import map from "./mapComponent/Map";
-import { mapPinIcon } from "./mapComponent/mapPinIcon";
+import map from "./Map";
+import { mapPinIcon } from "./mapPinIcon";
 
 const code_to_function = {
   1: clickCallback,
@@ -55,7 +55,7 @@ async function insertMarker(mapRef, ID, cords, title, color) {
   }`);
 }
 
-function goToPosition(mapRef, lat, long, dist = "16") {
+function goToPosition(mapRef, lat, long, dist = "20") {
   mapRef.injectJavaScript(`mymap.setView([${lat}, ${long}], ${dist});`);
 }
 
